@@ -1,0 +1,54 @@
+/* Top Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 80px;
+    background: #6B3CC9;
+}
+
+#logo {
+    width: 238.89px;
+    height: 25px;
+}
+
+#navlist {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#navlist li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+}
+
+#mobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 375px) {
+    #mobile {
+        display: block;
+    }
+
+    #navlist li {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+}

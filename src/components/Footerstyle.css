@@ -1,0 +1,70 @@
+.footer {
+    background: #6B3CC9;
+    padding: 2rem 4rem;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.aboutsec p {
+    width: 413px;
+    height: 57px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.top p {
+    font-size: 14px;
+    line-height: 16.94px;
+    margin: 0.5rem 0;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0.2rem;
+}
+
+.bottom p {
+
+    font-size: 14px;
+    margin-top: 0.2rem;
+    color: white;
+    font-weight: 500;
+    padding-left: 8px;
+}
+
+hr {
+    color: white !important;
+    width: 630px;
+
+}
+
+
+@media screen and (max-width: 375px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .aboutsec p {
+        width: 100%;
+    }
+
+    hr {
+        width: 335px;
+    }
+
+}
