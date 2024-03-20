@@ -3,8 +3,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px 80px;
+    padding: 16px 20px;
     background: #6B3CC9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    width: 100%;
 }
 
 #logo {
@@ -12,43 +14,87 @@ nav {
     height: 25px;
 }
 
-#navlist {
+.nav-menu {
     display: flex;
     align-items: center;
-    margin: 0;
+    justify-content: center;
+    list-style: none;
 }
 
-#navlist li {
-    list-style: none;
-    padding: 0 20px;
+.nav-menu li {
+    padding: 0 18px;
     position: relative;
-
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-
     color: #FFFFFF;
 }
 
-#mobile {
+.nav-menu li:hover::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: #FFFFFF;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.mobile {
     display: none;
+    color: #FFFFFF;
 }
 
 
-@media screen and (max-width: 375px) {
-    #mobile {
-        display: block;
+@media screen and (max-width: 768px) {
+    nav {
+        z-index: 99;
     }
 
-    #navlist li {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: fixed;
+        background-color: #6B3CC9;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 100%;
+        opacity: 0;
+        padding: 60px 0 0 0;
+        margin: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+    }
+
+    .nav-menu.active {
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+    }
+
+    .nav-menu li {
+        font-size: 0.9rem;
+        padding: 1.5rem;
+        color: #6B3CC9;
+    }
+
+    .nav-menu li:hover {
+        background: #6B3CC9;
+        color: #FFFFFF;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: none;
+    }
+
+    .nav-menu li:hover::after {
         display: none;
     }
 
-    nav {
-        display: flex;
-        justify-content: center;
+    .mobile {
+        display: block;
+        padding: 0 30px;
     }
 
 }

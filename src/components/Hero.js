@@ -1,13 +1,13 @@
 import './Herostyle.css';
 import Heroimg from './assets/Hero-img.png';
 
-function Hero() {
+const Hero = () => {
   return (
     <>
       <div className="hero">
-        <img src={Heroimg} className="Heroimg" alt="" />
+        <img src={Heroimg} className="hero-img" alt="" />
 
-        <div className="textsec">
+        <div className="hero-text">
           <p>We crush your competitors, goals, and sales records - without the B.S.</p>
           <button>Get free consultation</button>
         </div>
